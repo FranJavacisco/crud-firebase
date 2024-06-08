@@ -1,10 +1,9 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
+// src/store.js
+
+import { createStore } from 'vuex';
 import { db } from './firebaseConfig';
 
-Vue.use(Vuex);
-
-export default new Vuex.Store({
+export default createStore({
     state: {
         users: []
     },
@@ -38,3 +37,4 @@ export default new Vuex.Store({
         users: state => state.users
     }
 });
+
